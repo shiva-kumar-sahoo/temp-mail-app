@@ -1,9 +1,11 @@
 import { View, Text, Image, Pressable, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons/";
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const InboxSceen = () => {
-  const [mails, setMails] = useState([]);
+  const [mails, setMails] = useState([1]);
+  const navigation = useNavigation();
   return (
     <View className="flex-1">
       <View className="flex items-center justify-center bg-[#16ca58] pt-8 pb-4">
@@ -42,7 +44,10 @@ const InboxSceen = () => {
       ) : (
         <ScrollView showsVerticalScrollIndicator={false}>
           <View className="flex items-center justify-center mt-10 px-4">
-            <Pressable className="flex flex-row items-center space-x-4 w-full mt-4 px-6 py-4 border-2 border-gray-300 rounded-xl">
+            <Pressable
+              className="flex flex-row items-center space-x-4 w-full mt-4 px-6 py-4 border-2 border-gray-300 rounded-xl"
+              onPress={() => navigation.navigate("InboxMailScreen")}
+            >
               <View className="flex-1">
                 <View className="my-2">
                   <Text
