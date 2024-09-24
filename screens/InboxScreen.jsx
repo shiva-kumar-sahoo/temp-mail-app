@@ -33,7 +33,13 @@ const InboxSceen = () => {
   };
   const refreshMails = async () => {
     setRefreshing(true);
-    fetchMails();
+    await fetchMails();
+    setCountDownTimer(15);
+  };
+
+  const handleRefreshBtn = async () => {
+    setRefreshing(true);
+    await fetchMails();
     setCountDownTimer(15);
   };
 
@@ -87,7 +93,7 @@ const InboxSceen = () => {
           <View className="mt-8">
             <Pressable
               className="flex flex-row items-center w-full mt-4 px-8 py-3 border-2 border-gray-300 rounded-xl"
-              onPress={fetchMails}
+              onPress={handleRefreshBtn}
             >
               <View className="flex w-44 items-center">
                 {refreshing ? (
