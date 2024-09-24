@@ -137,14 +137,18 @@ const InboxSceen = () => {
                   </View>
                   <View className="flex flex-row items-start mt-2">
                     <Text className="text-lg text-gray-400">From: </Text>
-                    <Text className="text-lg font-semibold text-[#16ca58]">
+                    <Text
+                      className="text-lg font-semibold text-[#16ca58] w-56"
+                      numberOfLines={1}
+                      ellipsizeMode="tail"
+                    >
                       {item?.from}
                     </Text>
                   </View>
                   <View className="flex flex-row items-start my-1">
                     <Text className="text-base text-gray-400">Subject: </Text>
                     <Text
-                      className="text-base font-normal"
+                      className="text-base font-normal w-56"
                       numberOfLines={1}
                       ellipsizeMode="tail"
                     >
