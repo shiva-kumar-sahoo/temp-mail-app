@@ -26,6 +26,7 @@ const EmailScreen = () => {
   };
 
   const handleGetNewEmail = async () => {
+    await AsyncStorage.removeItem("email");
     await genEmail();
   };
   useEffect(() => {
