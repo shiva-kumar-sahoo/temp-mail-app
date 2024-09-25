@@ -27,7 +27,7 @@
 
 1. **Clone the Repository:**
   ```bash
-  https://github.com/shiva-kumar-sahoo/temp-mail-app.git💬
+  https://github.com/shiva-kumar-sahoo/temp-mail-app.git
    ```
    
 2. **Install Dependencies:**
